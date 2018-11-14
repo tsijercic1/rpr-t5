@@ -1,3 +1,6 @@
 #display{
-    -fx-background-color: aquamarine;
+    -fx-background-color: chartreuse;
+}
+#equalsBtn{
+    -fx-background-color: red;
 }
