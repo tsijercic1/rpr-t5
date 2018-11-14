@@ -80,6 +80,16 @@ class MainTest {
     }
 
     @Test
+    public void myTestNumberFour (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn9");
+        robot.clickOn("#btn7");
+        robot.clickOn("#minusBtn");
+        robot.clickOn("#btn5");
+        robot.clickOn("#equalsBtn");
+        assertEquals("92.0", display.getText());
+    }
+    @Test
     public void number123 (FxRobot robot) {
         display = robot.lookup("#display").queryAs(Label.class);
         robot.clickOn("#btn1");
