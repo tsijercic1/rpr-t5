@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal05;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -13,63 +14,76 @@ public class Controller implements Initializable {
     private String result="0";
     private String operand="";
     private String operator="";
+    private SimpleStringProperty resProp;
+
+    public Controller(){
+        resProp = new SimpleStringProperty();
+    }
+
+    public SimpleStringProperty resPropProperty(){
+        return resProp;
+    }
+
+    public String getResProp(){
+        return resProp.get();
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        display.setText("0");
+        resProp.set("0");
     }
 
     public void zero(ActionEvent actionEvent) {
         if(!operand.equals("")){
             operand+="0";
-            display.setText(operand);
+            resProp.set(operand);
         }
     }
 
     public void one(ActionEvent actionEvent) {
         operand+="1";
-        display.setText(operand);
+        resProp.set(operand);
     }
 
     public void nine(ActionEvent actionEvent) {
         operand+="9";
-        display.setText(operand);
+        resProp.set(operand);
     }
 
 
     public void seven(ActionEvent actionEvent) {
         operand+="7";
-        display.setText(operand);
+        resProp.set(operand);
     }
 
     public void six(ActionEvent actionEvent) {
         operand+="6";
-        display.setText(operand);
+        resProp.set(operand);
     }
 
     public void three(ActionEvent actionEvent) {
         operand+="3";
-        display.setText(operand);
+        resProp.set(operand);
     }
 
     public void five(ActionEvent actionEvent) {
         operand+="5";
-        display.setText(operand);
+        resProp.set(operand);
     }
 
     public void four(ActionEvent actionEvent) {
         operand+="4";
-        display.setText(operand);
+        resProp.set(operand);
     }
 
     public void eight(ActionEvent actionEvent) {
         operand+="8";
-        display.setText(operand);
+        resProp.set(operand);
     }
 
     public void two(ActionEvent actionEvent) {
         operand+="2";
-        display.setText(operand);
+        resProp.set(operand);
     }
 
     public void plus(ActionEvent actionEvent) {
@@ -79,52 +93,86 @@ public class Controller implements Initializable {
             a+=b;
             result=a.toString();
             operand="";
-            display.setText("0");
+            resProp.set("0");
             operator="+";
     }
 
     public void minus(ActionEvent actionEvent) {
+        //System.out.println("Result: "+result);
+        //System.out.println("Operand: "+operand);
         if(operand.equals("")){
-            operand+="-0";
-            display.setText(operand);
+            operand+="-";
+            resProp.set(operand);
         }else{
             Double a,b;
             a=Double.parseDouble(result);
             b=Double.parseDouble(operand);
-            a-=b;
+            a+=b;
             result=a.toString();
             operand="";
-            display.setText("0");
+            resProp.set("0");
             operator="-";
         }
     }
 
     public void divide(ActionEvent actionEvent) {
+        operator="/";
+        result=operand;
+        operand="";
     }
 
     public void mod(ActionEvent actionEvent) {
+        operator="%";
+        result=operand;
+        operand="";
     }
 
     public void times(ActionEvent actionEvent) {
+        operator="x";
+        result=operand;
+        operand="";
     }
 
     public void dot(ActionEvent actionEvent) {
-        String temp=operand;
+        //String temp=operand;
         if(!operand.contains(".")){
             operand+=".";
-            display.setText(operand);
+            resProp.set(operand);
         }
     }
 
     public void equals(ActionEvent actionEvent) {
+        System.out.println("Result: "+result);
+        System.out.println("Operand: "+operand);
         Double a,b;
         a=Double.parseDouble(result);
         result="0";
         b=Double.parseDouble(operand);
         operand="";
+        switch (operator){
+            case "+":
+                a+=b;
+                resProp.set(a.toString());
+                break;
+            case "-":
+                a-=b;
+                resProp.set(a.toString());
+                break;
+            case "x":
+                a*=b;
+                resProp.set(a.toString());
+                break;
+            case "/":
+                a/=b;
+                resProp.set(a.toString());
+                break;
+            case "%":
+                a%=b;
+                resProp.set(a.toString());
+                break;
+
+        }
         if(operator.equals("+")){
-            a+=b;
-            display.setText(a.toString());
         }
     }
 }

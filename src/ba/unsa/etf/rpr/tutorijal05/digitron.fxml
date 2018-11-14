@@ -49,7 +49,7 @@
 
       
       
-                         <Label fx:id="display" maxHeight="Infinity" maxWidth="Infinity" GridPane.columnSpan="4" />
+                         <Label fx:id="display" text="${controller.resProp}" maxHeight="Infinity" maxWidth="Infinity" GridPane.columnSpan="4" />
 
                          <Button fx:id="btn0" text="0" onAction="#zero" GridPane.columnSpan="2" GridPane.rowIndex="5" />
 
