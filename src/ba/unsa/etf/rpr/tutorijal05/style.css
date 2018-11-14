@@ -3,7 +3,7 @@
     -fx-padding: 10px,0px,0px,0px;
 }
 #equalsBtn{
-    -fx-background-color: lightcoral;
+    -fx-background-color: rgb(230,110,122);
 }
 #equalsBtn:hover{
     -fx-background-color:coral;

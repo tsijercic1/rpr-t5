@@ -12,6 +12,7 @@ public class Controller implements Initializable {
     public Label display;
     private String result="0";
     private String operand="";
+    private String operator="";
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -72,10 +73,30 @@ public class Controller implements Initializable {
     }
 
     public void plus(ActionEvent actionEvent) {
+            Double a,b;
+            a=Double.parseDouble(result);
+            b=Double.parseDouble(operand);
+            a+=b;
+            result=a.toString();
+            operand="";
+            display.setText("0");
+            operator="+";
     }
 
     public void minus(ActionEvent actionEvent) {
-
+        if(operand.equals("")){
+            operand+="-0";
+            display.setText(operand);
+        }else{
+            Double a,b;
+            a=Double.parseDouble(result);
+            b=Double.parseDouble(operand);
+            a-=b;
+            result=a.toString();
+            operand="";
+            display.setText("0");
+            operator="-";
+        }
     }
 
     public void divide(ActionEvent actionEvent) {
@@ -89,13 +110,21 @@ public class Controller implements Initializable {
 
     public void dot(ActionEvent actionEvent) {
         String temp=operand;
-        if(!operand.matches(".")){
+        if(!operand.contains(".")){
             operand+=".";
             display.setText(operand);
         }
     }
 
     public void equals(ActionEvent actionEvent) {
-
+        Double a,b;
+        a=Double.parseDouble(result);
+        result="0";
+        b=Double.parseDouble(operand);
+        operand="";
+        if(operator.equals("+")){
+            a+=b;
+            display.setText(a.toString());
+        }
     }
 }
