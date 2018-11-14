@@ -40,6 +40,21 @@ class MainTest {
     }
 
     @Test
+    public void myTestNumberONe (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn1");
+        robot.clickOn("#dotBtn");
+        robot.clickOn("#btn5");
+        robot.clickOn("#timesBtn");
+        robot.clickOn("#btn1");
+        robot.clickOn("#dotBtn");
+        robot.clickOn("#btn5");
+        robot.clickOn("#equalsBtn");
+
+        assertEquals("2.25", display.getText());
+    }
+
+    @Test
     public void number123 (FxRobot robot) {
         display = robot.lookup("#display").queryAs(Label.class);
         robot.clickOn("#btn1");

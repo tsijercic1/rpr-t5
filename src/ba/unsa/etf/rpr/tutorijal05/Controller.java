@@ -142,8 +142,8 @@ public class Controller implements Initializable {
     }
 
     public void equals(ActionEvent actionEvent) {
-        System.out.println("Result: "+result);
-        System.out.println("Operand: "+operand);
+        //System.out.println("Result: "+result);
+        //System.out.println("Operand: "+operand);
         Double a,b;
         a=Double.parseDouble(result);
         result="0";
