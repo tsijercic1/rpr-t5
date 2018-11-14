@@ -40,7 +40,7 @@ class MainTest {
     }
 
     @Test
-    public void myTestNumberONe (FxRobot robot) {
+    public void myTestNumberOne (FxRobot robot) {
         display = robot.lookup("#display").queryAs(Label.class);
         robot.clickOn("#btn1");
         robot.clickOn("#dotBtn");
@@ -50,8 +50,33 @@ class MainTest {
         robot.clickOn("#dotBtn");
         robot.clickOn("#btn5");
         robot.clickOn("#equalsBtn");
-
         assertEquals("2.25", display.getText());
+    }
+
+    @Test
+    public void myTestNumberTwo (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn2");
+        robot.clickOn("#dotBtn");
+        robot.clickOn("#btn2");
+        robot.clickOn("#btn5");
+        robot.clickOn("#divideBtn");
+        robot.clickOn("#minusBtn");
+        robot.clickOn("#btn1");
+        robot.clickOn("#dotBtn");
+        robot.clickOn("#btn5");
+        robot.clickOn("#equalsBtn");
+        assertEquals("-1.5", display.getText());
+    }
+
+    @Test
+    public void myTestNumberThree (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn9");
+        robot.clickOn("#modBtn");
+        robot.clickOn("#btn5");
+        robot.clickOn("#equalsBtn");
+        assertEquals("4.0", display.getText());
     }
 
     @Test
