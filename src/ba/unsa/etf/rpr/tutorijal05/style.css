@@ -1,6 +1,18 @@
 #display{
-    -fx-background-color: chartreuse;
+    -fx-background-color: lightgreen;
+    -fx-padding: 10px,0px,0px,0px;
 }
 #equalsBtn{
-    -fx-background-color: red;
+    -fx-background-color: lightcoral;
 }
+#equalsBtn:hover{
+    -fx-background-color:coral;
+}
+GridPane{
+    -fx-padding: 5px,5px,5px,5px;
+}
+
+Button{
+    -fx-max-width: infinity;
+}
+

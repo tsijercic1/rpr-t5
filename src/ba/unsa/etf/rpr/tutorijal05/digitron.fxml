@@ -29,48 +29,46 @@
    </rowConstraints>
    <children>
 
-                         <Button fx:id="btn3" maxWidth="Infinity" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                         <Button fx:id="btn3"  text="3" GridPane.columnIndex="2" GridPane.rowIndex="4" />
 
-                         <Button fx:id="btn5" maxWidth="Infinity" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                         <Button fx:id="btn5" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
-                         <Button fx:id="minusBtn" maxWidth="Infinity" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                         <Button fx:id="minusBtn" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
 
-                         <Button fx:id="divideBtn" maxWidth="Infinity" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                         <Button fx:id="divideBtn" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-                         <Button fx:id="btn4" maxWidth="Infinity" text="4" GridPane.rowIndex="3" />
+                         <Button fx:id="btn4" text="4" GridPane.rowIndex="3" />
 
-                         <Button fx:id="btn8" maxWidth="Infinity" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                         <Button fx:id="btn8" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-                         <Button fx:id="plusBtn" maxHeight="Infinity" maxWidth="Infinity" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+                         <Button fx:id="plusBtn" maxHeight="Infinity" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2" />
 
-                         <Button fx:id="btn2" maxWidth="Infinity" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                         <Button fx:id="btn2" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
-                         <Button fx:id="modBtn" maxWidth="Infinity" mnemonicParsing="false" text="\%" GridPane.rowIndex="1" />
+                         <Button fx:id="modBtn" mnemonicParsing="false" text="\%" GridPane.rowIndex="1" />
 
       
       
                          <Label fx:id="display" maxHeight="Infinity" maxWidth="Infinity" GridPane.columnSpan="4" />
 
-                         <Button fx:id="btn0" maxWidth="Infinity" text="0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                         <Button fx:id="btn0" text="0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
 
-                         <Button fx:id="btn1" maxWidth="Infinity" text="1" GridPane.rowIndex="4" />
+                         <Button fx:id="btn1" text="1" GridPane.rowIndex="4" />
 
-                         <Button fx:id="btn9" maxWidth="Infinity" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                         <Button fx:id="btn9" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
 
-                         <Button fx:id="btn7" maxWidth="Infinity" text="7" GridPane.rowIndex="2" />
+                         <Button fx:id="btn7" text="7" GridPane.rowIndex="2" />
 
-                         <Button fx:id="btn6" maxWidth="Infinity" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                         <Button fx:id="btn6" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
 
-             <Button fx:id="equalsBtn" maxHeight="Infinity" maxWidth="Infinity" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
+                         <Button fx:id="equalsBtn" maxHeight="Infinity" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
 
-                         <Button fx:id="timesBtn" maxWidth="Infinity" text="x" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                         <Button fx:id="timesBtn" text="x" GridPane.columnIndex="2" GridPane.rowIndex="1" />
 
-                         <Button fx:id="dotBtn" maxWidth="Infinity" text="." GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                         <Button fx:id="dotBtn" text="." GridPane.columnIndex="2" GridPane.rowIndex="5" />
    </children>
     <stylesheets>
         <URL value="@style.css" />
     </stylesheets>
-   <padding>
-      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-   </padding>
+
 </GridPane>
