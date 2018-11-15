@@ -163,7 +163,7 @@ public class Controller implements Initializable {
                 break;
             case "/":
                 if(b==0){
-                    resProp.set("Error");
+                    resProp.set("Infinity");
                     return;
                 }
                 a/=b;
