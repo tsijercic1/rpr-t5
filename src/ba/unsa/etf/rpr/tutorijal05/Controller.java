@@ -87,19 +87,19 @@ public class Controller implements Initializable {
     }
 
     public void plus(ActionEvent actionEvent) {
-            Double a,b;
-            a=Double.parseDouble(result);
-            b=Double.parseDouble(operand);
-            a+=b;
-            result=a.toString();
-            operand="";
+        if(!operand.equals("")) {
+            Double a, b;
+            a = Double.parseDouble(result);
+            b = Double.parseDouble(operand);
+            a += b;
+            result = a.toString();
+            operand = "";
+        }
             resProp.set("0");
             operator="+";
     }
 
     public void minus(ActionEvent actionEvent) {
-        //System.out.println("Result: "+result);
-        //System.out.println("Operand: "+operand);
         if(operand.equals("")){
             operand+="-";
             resProp.set(operand);
@@ -134,7 +134,6 @@ public class Controller implements Initializable {
     }
 
     public void dot(ActionEvent actionEvent) {
-        //String temp=operand;
         if(!operand.contains(".")){
             operand+=".";
             resProp.set(operand);
@@ -142,11 +141,11 @@ public class Controller implements Initializable {
     }
 
     public void equals(ActionEvent actionEvent) {
-        //System.out.println("Result: "+result);
-        //System.out.println("Operand: "+operand);
+
         Double a,b;
         a=Double.parseDouble(result);
         result="0";
+        if(operand.equals(""))operand="0";
         b=Double.parseDouble(operand);
         operand="";
         switch (operator){
@@ -163,6 +162,10 @@ public class Controller implements Initializable {
                 resProp.set(a.toString());
                 break;
             case "/":
+                if(b==0){
+                    resProp.set("Error");
+                    return;
+                }
                 a/=b;
                 resProp.set(a.toString());
                 break;
@@ -171,8 +174,6 @@ public class Controller implements Initializable {
                 resProp.set(a.toString());
                 break;
 
-        }
-        if(operator.equals("+")){
         }
     }
 }

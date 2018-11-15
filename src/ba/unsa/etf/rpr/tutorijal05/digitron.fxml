@@ -46,10 +46,8 @@
                          <Button fx:id="btn2" onAction="#two" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
                          <Button fx:id="modBtn" onAction="#mod" mnemonicParsing="false" text="\%" GridPane.rowIndex="1" />
-
       
-      
-                         <Label fx:id="display" text="${controller.resProp}" maxHeight="Infinity" maxWidth="Infinity" GridPane.columnSpan="4" />
+                         <Label fx:id="display" text="${controller.resProp}" GridPane.columnSpan="4" />
 
                          <Button fx:id="btn0" text="0" onAction="#zero" GridPane.columnSpan="2" GridPane.rowIndex="5" />
 

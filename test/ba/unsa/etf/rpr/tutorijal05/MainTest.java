@@ -40,7 +40,7 @@ class MainTest {
     }
 
     @Test
-    public void myTestNumberOne (FxRobot robot) {
+    public void multiplicationTest (FxRobot robot) {
         display = robot.lookup("#display").queryAs(Label.class);
         robot.clickOn("#btn1");
         robot.clickOn("#dotBtn");
@@ -54,7 +54,7 @@ class MainTest {
     }
 
     @Test
-    public void myTestNumberTwo (FxRobot robot) {
+    public void divisionByNegativeTest (FxRobot robot) {
         display = robot.lookup("#display").queryAs(Label.class);
         robot.clickOn("#btn2");
         robot.clickOn("#dotBtn");
@@ -70,7 +70,7 @@ class MainTest {
     }
 
     @Test
-    public void myTestNumberThree (FxRobot robot) {
+    public void modTest (FxRobot robot) {
         display = robot.lookup("#display").queryAs(Label.class);
         robot.clickOn("#btn9");
         robot.clickOn("#modBtn");
@@ -80,7 +80,7 @@ class MainTest {
     }
 
     @Test
-    public void myTestNumberFour (FxRobot robot) {
+    public void subtractionTest (FxRobot robot) {
         display = robot.lookup("#display").queryAs(Label.class);
         robot.clickOn("#btn9");
         robot.clickOn("#btn7");
